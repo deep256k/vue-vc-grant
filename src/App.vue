@@ -2,8 +2,11 @@
   <div id="app">
    <top-bar></top-bar>
    <nav-bar></nav-bar>
+    <!-- //<h1>params {{this.id}}</h1> -->
+    <div> params{{ currentRouteName }}</div>
    <router-view></router-view>
    <vc-footer></vc-footer>
+  
    <!-- <button @click="getData">Get</button>  -->
   </div>
 </template>
@@ -12,14 +15,25 @@
 import NavBar from '../src/components/TheNavBar.vue'
 import TopBar from '../src/components/TheTopBar.vue'
 import VcFooter from '../src/components/TheFooter.vue'
+
 import axios from 'axios'
 export default {
+  data(){
+    return{
+      id : this.$route.name
+    }
+  },
   components:{
     NavBar,
     TopBar,
     VcFooter
 
   },
+  computed: {
+    currentRouteName() {
+        return this.$route.path;
+    }
+},
   created(){
         this.$store.dispatch('commitData');
         this.$store.dispatch('commitCharityData')

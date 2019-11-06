@@ -1,5 +1,5 @@
 <template>
-    <div class="max-width-container test">
+    <div class="grant-containers">
         <grantee-contact @advisorData = "advisorData = $event"></grantee-contact>
         <purpose-deatils @checkClicked = "check =$event"></purpose-deatils>
          <grant-recongnition @formData = "formData = $event"
@@ -60,5 +60,8 @@ export default {
 button[disabled=disabled], button:disabled {
    opacity: 0.4;
   cursor: not-allowed
+}
+.grant-containers{
+    width: 100%;
 }
 </style>

@@ -6,7 +6,7 @@
             </div>
             <div class="right-section">
                 <ul class="nav nav-pills">
-                    <router-link tag= "li" to="/" class="active-grant" active-class="active"><a>Home</a></router-link>
+                    <router-link tag= "li" to="/" class="active-grant" active-class="active"><a>HOME</a></router-link>
                     <li class="nav-link"><a href="#" >SUMMARY</a></li>
                     <router-link tag= "li" to="/grant" class="active-grant" active-class="active"><a>GRANTS</a></router-link>
                     <li class="nav-link"><a href="#" >CONTRIBUTIONS</a></li>

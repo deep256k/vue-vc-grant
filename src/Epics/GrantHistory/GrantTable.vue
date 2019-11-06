@@ -10,7 +10,7 @@
     <td>{{data.Address}}</td>
     <td>{{data.lastGrant}}</td>
     <td>{{data.interestArea}}</td>
-    <td><button class="selct-button" @click="navigateToPurpose(i)">select</button></td>
+    <td><button v-b-modal.modal-1 class="selct-button" @click="navigateToPurpose(i)">select</button></td>
   </tr>
 </table>
     </div>
@@ -23,18 +23,26 @@ export default {
         }
     },
     props:{
-      tableData:Array
+      tableData:Array,
+      openModal : Boolean
       },
     methods:{
       navigateToPurpose(i){
-        this.$router.push({name:'GrantPurpose'})
+        //this.$router.push({name:'GrantPurpose'})
         const selecteddata = {
             name: this.tableData[i].legalName,
             EIN : this.tableData[i].EIN,
-            Address: this.tableData[i].Address
+            Address: this.tableData[i].Address,
+            lastGrant:this.tableData[i].lastGrant,
+            interestArea:this.tableData[i].interestArea,
+
         }
-        //console.log("selected data is",selecteddata)
+       // console.log("selected data is",selecteddata)
         this.$store.dispatch("commitcharityInformationData",selecteddata)
+        this.$emit("launch-modal",selecteddata)
+        this.openModal = true;
+        console.log('modal is',this.openModal)
+        this.$emit('modalStatus',this.openModal)
 
       }
     }

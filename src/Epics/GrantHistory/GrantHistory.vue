@@ -1,7 +1,7 @@
 <template>
     <div>
         <section-heading :section-heading = "sectionHeading"></section-heading>
-        <grant-tabs></grant-tabs>
+        <grant-tabs> </grant-tabs>
     </div>
 </template>
 <script>
@@ -20,5 +20,5 @@ export default {
 }
 </script>
 <style scoped>
-
+ 
 </style>

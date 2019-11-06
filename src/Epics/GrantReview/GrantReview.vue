@@ -1,5 +1,5 @@
 <template>
-    <div class = "max-width-container grant-review">
+    <div class = "grant-review">
      <div class="review-heading">
         <section-heading :section-heading = "sectionHeading"></section-heading>
         <p>Review your grant recommendation information below, edit it if necessary, before submitting.</p>
@@ -172,7 +172,7 @@ export default {
 .charity-info-wrapper{
         display: flex;
         justify-content: space-between;
-        width: 60%;
+        width: 100%;
         
 }
 .charity-name-heading{
@@ -205,7 +205,7 @@ export default {
 font-family: HelveticaNeue-bold;
 }
 .charity-name,.charity-purpose{
-    width: 50%;
+    width: 100%;
 }
 .button-wrapper{
     padding-top: 50px;
