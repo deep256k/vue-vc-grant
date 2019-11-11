@@ -140,6 +140,9 @@ export default {
         },
         getRadioInfo () {
             return this.$store.getters.getRadioOption
+        },
+        getAllData(){
+            return this.$store.getters.getAllocationData
         }
     },
     created(){
@@ -147,11 +150,11 @@ export default {
         // console.log('recived data', this.$store.getters.getOption)
         //console.log('recived form data', this.$store.getters.getRadioOption)
             eventBus.$on('recognitionData',(data1) => {
-            console.log("recived form data" , data1)
+            //console.log("recived form data" , data1)
             this.date = data1;
 
         })
-
+        //console.log("allData",this.$store.getters.getAllocationData)
     }
 }
 </script>

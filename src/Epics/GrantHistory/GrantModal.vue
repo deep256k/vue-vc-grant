@@ -34,7 +34,7 @@ export default {
         },
     },
     created(){
-        console.log("modal data",this.$store.getters.getcharityInformationData)
+        //console.log("modal data",this.$store.getters.getcharityInformationData)
     },
     props:['launchData']
 }

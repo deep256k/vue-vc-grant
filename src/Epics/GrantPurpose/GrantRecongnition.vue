@@ -65,11 +65,11 @@ export default {
                buttonClicked : this.checked
            }
            this.$emit('radioClicked',selectedButton)
-           console.log("capturedData",selectedButton)
+           //console.log("capturedData",selectedButton)
        }
    },
    created(){
-      console.log("recivedfund", this.$store.getters.getData)
+     // console.log("recivedfund", this.$store.getters.getData)
    },
    methods:{
        

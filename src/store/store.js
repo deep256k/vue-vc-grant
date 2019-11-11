@@ -14,7 +14,8 @@ export const store = new Vuex.Store({
        option :'',
        formData:{},
        advisorDetails:{},
-       radioInput:''
+       radioInput:'',
+       allocationSummary : ''
    },
    mutations:{
        changeData: (state,fundData) => {
@@ -41,6 +42,9 @@ export const store = new Vuex.Store({
         },
         radioOption:(state,input) =>{
             state.radioInput = input
+        },
+        selectedAllocation:(state,allocation) =>{
+            state.allocationSummary = allocation
         }
    },
    actions:{
@@ -77,6 +81,9 @@ export const store = new Vuex.Store({
        },
        commitRadioOption({commit},input){
            commit('radioOption', input)
+       },
+       commitSelectedAllocation({commit},allData){
+           commit('selectedAllocation', allData)
        }
    },
    getters:{
@@ -100,6 +107,9 @@ export const store = new Vuex.Store({
         },
         getRadioOption :state =>{
             return state.radioInput
+        },
+        getAllocationData : state =>{
+            return state.allocationSummary
         }
    }
 })

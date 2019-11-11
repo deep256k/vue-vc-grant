@@ -73,7 +73,8 @@ export default {
             // this.$emit("recognitionData",amountData)
             // console.log("emitted",amountData)
             eventBus.$emit("recognitionData",amountData)
-             console.log("emitted",this.selectedDate)
+            // console.log("emitted",this.selectedDate)
+             this.$store.dispatch("commitcharityInformationData",amountData)
        },
        navigatetoExit(){
            this.$router.push({name:'Home'})

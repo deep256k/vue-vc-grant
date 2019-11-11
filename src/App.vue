@@ -3,11 +3,11 @@
    <top-bar></top-bar>
    <nav-bar></nav-bar>
     <!-- //<h1>params {{this.id}}</h1> -->
-    <div> params{{ currentRouteName }}</div>
    <router-view></router-view>
    <vc-footer></vc-footer>
   
    <!-- <button @click="getData">Get</button>  -->
+   
   </div>
 </template>
 
@@ -29,14 +29,10 @@ export default {
     VcFooter
 
   },
-  computed: {
-    currentRouteName() {
-        return this.$route.path;
-    }
-},
   created(){
         this.$store.dispatch('commitData');
         this.$store.dispatch('commitCharityData')
+        console.log("route",this.currentRouteName)
   },
   methods:{
     // getData(){

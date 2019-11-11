@@ -65,7 +65,7 @@ export default {
             advisorEmail : this.advisorEmail,
         }
             this.$emit('advisorData',currentData)
-            console.log("capturedData",currentData)
+            //console.log("capturedData",currentData)
         }
     },
     validations:{

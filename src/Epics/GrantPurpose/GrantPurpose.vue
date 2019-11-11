@@ -8,7 +8,7 @@
         <back-button :button-input = "backInput" @back-step = "navigatetoBack"></back-button>
         <back-button :button-input = "exitInput" @back-step = "navigatetoExit"></back-button>
         <next-button :button-input = "nextInput" 
-        @next-step = "navigateToAllocation" :disabled = " this.radioData.buttonClicked && this.advisorData.advisorFirstName && this.advisorData.advisorLastName &&  this.advisorData.advisorLastName.advisorEmail  == '' "
+        @next-step = "navigateToAllocation" enabled = " this.radioData.buttonClicked && this.advisorData.advisorFirstName && this.advisorData.advisorLastName &&  this.advisorData.advisorLastName.advisorEmail  == '' "
         ></next-button>
     </div>
 </template>

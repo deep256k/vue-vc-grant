@@ -41,7 +41,7 @@ export default {
         this.$store.dispatch("commitcharityInformationData",selecteddata)
         this.$emit("launch-modal",selecteddata)
         this.openModal = true;
-        console.log('modal is',this.openModal)
+       // console.log('modal is',this.openModal)
         this.$emit('modalStatus',this.openModal)
 
       }
